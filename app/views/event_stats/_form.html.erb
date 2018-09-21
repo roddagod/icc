@@ -1,0 +1,23 @@
+
+<%= simple_form_for(@event_stat) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name, label: 'Nom' %>
+    <%= f.input :event_date, label: 'Date' %>
+    <%= f.association :icc_event, label: 'Type' %>
+    <%= f.input :orateur, label: 'Orateur' %>
+    <%= f.input :moderateur, label: 'Modérateur' %>
+    <%= f.input :conducteur, label: 'Conducteur de prière' %>
+    <%= f.input :nb_nonstar_h, label: 'Fidèles Hommes' %>
+    <%= f.input :nb_nonstar_f, label: 'Fidèles Femmes' %>
+    <%= f.input :nb_star_h, label: 'STAR Hommes' %>
+    <%= f.input :nb_star_f, label: 'STAR Femmes' %>
+    <%= f.input :nb_enfants, label: 'Enfants' %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

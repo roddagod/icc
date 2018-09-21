@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Event Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Date</th>
+      <th>Type</th>
+      <th>Orateur</th>
+      <th>Modérateur</th>
+      <th>Conducteur</th>
+      <th>Fidèles H</th>
+      <th>Fidèles F</th>
+      <th>STAR H</th>
+      <th>STAR F</th>
+      <th>Enfants</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_stats.each do |event_stat| %>
+      <tr>
+        <td><%= event_stat.name %></td>
+        <td><%= event_stat.event_date %></td>
+        <td><%= event_stat.icc_event %></td>
+        <td><%= event_stat.orateur %></td>
+        <td><%= event_stat.moderateur %></td>
+        <td><%= event_stat.conducteur %></td>
+        <td><%= event_stat.nb_nonstar_h %></td>
+        <td><%= event_stat.nb_nonstar_f %></td>
+        <td><%= event_stat.nb_star_h %></td>
+        <td><%= event_stat.nb_star_f %></td>
+        <td><%= event_stat.nb_enfants %></td>
+        <td><%= link_to 'Show', event_stat %></td>
+        <td><%= link_to 'Edit', edit_event_stat_path(event_stat) %></td>
+        <td><%= link_to 'Destroy', event_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event Stat', new_event_stat_path %>

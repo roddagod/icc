@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event_stat.name %>
+</p>
+
+<p>
+  <strong>Event date:</strong>
+  <%= @event_stat.event_date %>
+</p>
+
+<p>
+  <strong>Icc event:</strong>
+  <%= @event_stat.icc_event %>
+</p>
+
+<p>
+  <strong>Orateur:</strong>
+  <%= @event_stat.orateur %>
+</p>
+
+<p>
+  <strong>Moderateur:</strong>
+  <%= @event_stat.moderateur %>
+</p>
+
+<p>
+  <strong>Conducteur:</strong>
+  <%= @event_stat.conducteur %>
+</p>
+
+<p>
+  <strong>Nb nonstar h:</strong>
+  <%= @event_stat.nb_nonstar_h %>
+</p>
+
+<p>
+  <strong>Nb nonstar f:</strong>
+  <%= @event_stat.nb_nonstar_f %>
+</p>
+
+<p>
+  <strong>Nb star h:</strong>
+  <%= @event_stat.nb_star_h %>
+</p>
+
+<p>
+  <strong>Nb star f:</strong>
+  <%= @event_stat.nb_star_f %>
+</p>
+
+<p>
+  <strong>Nb enfants:</strong>
+  <%= @event_stat.nb_enfants %>
+</p>
+
+<%= link_to 'Edit', edit_event_stat_path(@event_stat) %> |
+<%= link_to 'Back', event_stats_path %>
